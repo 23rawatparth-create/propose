@@ -217,16 +217,13 @@
 </head>
 <body>
     <div class="scene-container" id="sceneContainer">
-        <!-- Stars will be added via JavaScript -->
         <div class="neon-particles" id="particles"></div>
         <div class="ground"></div>
         
-        <!-- Spotlights -->
         <div class="spotlight" id="spotlightBoy" style="left: 20%; bottom: 15%;"></div>
         <div class="spotlight" id="spotlightGirl" style="right: 20%; bottom: 15%;"></div>
         <div class="spotlight" id="spotlightCenter" style="left: 50%; bottom: 15%; transform: translateX(-50%);"></div>
         
-        <!-- Boy Character (SVG) -->
         <svg class="character boy" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="boyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -235,29 +232,22 @@
                 </linearGradient>
             </defs>
             
-            <!-- Head -->
             <circle cx="50" cy="40" r="20" stroke="url(#boyGradient)" stroke-width="2.5" fill="none" />
             
-            <!-- Body -->
             <line x1="50" y1="60" x2="50" y2="120" stroke="url(#boyGradient)" stroke-width="2.5" id="boyBody" />
             
-            <!-- Arms -->
             <line x1="50" y1="80" x2="20" y2="100" stroke="url(#boyGradient)" stroke-width="2.5" class="left-arm" id="leftArm" />
             <line x1="50" y1="80" x2="80" y2="100" stroke="url(#boyGradient)" stroke-width="2.5" class="right-arm" id="rightArm" />
             
-            <!-- Legs -->
             <line x1="50" y1="120" x2="30" y2="180" stroke="url(#boyGradient)" stroke-width="2.5" id="leftLeg" />
             <line x1="50" y1="120" x2="70" y2="180" stroke="url(#boyGradient)" stroke-width="2.5" id="rightLeg" />
             
-            <!-- Smile -->
             <path d="M40,45 Q50,55 60,45" stroke="url(#boyGradient)" stroke-width="2.5" fill="none" />
             
-            <!-- Eyes -->
             <circle cx="42" cy="35" r="3" stroke="url(#boyGradient)" stroke-width="2.5" fill="none" />
             <circle cx="58" cy="35" r="3" stroke="url(#boyGradient)" stroke-width="2.5" fill="none" />
         </svg>
         
-        <!-- Girl Character (SVG) -->
         <svg class="character girl" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="girlGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -266,32 +256,24 @@
                 </linearGradient>
             </defs>
             
-            <!-- Head -->
             <circle cx="50" cy="40" r="20" stroke="url(#girlGradient)" stroke-width="2.5" fill="none" />
             
-            <!-- Hair -->
             <path d="M30,40 Q35,10 50,15 Q65,10 70,40" stroke="url(#girlGradient)" stroke-width="2.5" fill="none" />
             
-            <!-- Body (Dress shape) -->
             <path d="M50,60 Q40,90 30,120 L70,120 Q60,90 50,60" stroke="url(#girlGradient)" stroke-width="2.5" fill="none" />
             
-            <!-- Arms -->
             <line x1="40" y1="75" x2="20" y2="85" stroke="url(#girlGradient)" stroke-width="2.5" id="girlLeftArm" />
             <line x1="60" y1="75" x2="80" y2="85" stroke="url(#girlGradient)" stroke-width="2.5" id="girlRightArm" />
             
-            <!-- Legs -->
             <line x1="40" y1="120" x2="40" y2="180" stroke="url(#girlGradient)" stroke-width="2.5" />
             <line x1="60" y1="120" x2="60" y2="180" stroke="url(#girlGradient)" stroke-width="2.5" />
             
-            <!-- Smile -->
             <path d="M40,45 Q50,55 60,45" stroke="url(#girlGradient)" stroke-width="2.5" fill="none" id="girlSmile" />
             
-            <!-- Eyes -->
             <circle cx="42" cy="35" r="3" stroke="url(#girlGradient)" stroke-width="2.5" fill="none" />
             <circle cx="58" cy="35" r="3" stroke="url(#girlGradient)" stroke-width="2.5" fill="none" />
         </svg>
         
-        <!-- Enhanced Rose (SVG) -->
         <svg class="rose" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="roseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -304,7 +286,6 @@
                 </linearGradient>
             </defs>
             
-            <!-- Improved Rose Petals -->
             <path d="M50,20 
                     C55,15 65,15 65,25 
                     C70,15 80,20 70,30 
@@ -318,15 +299,12 @@
                     C35,15 45,15 50,20" 
                   stroke="url(#roseGradient)" stroke-width="2" fill="none" />
             
-            <!-- Stem -->
             <line x1="50" y1="45" x2="50" y2="100" stroke="url(#stemGradient)" stroke-width="2.5" />
             
-            <!-- Leaves -->
             <path d="M50,60 C60,50 75,55 65,70" stroke="url(#stemGradient)" stroke-width="2" fill="none" />
             <path d="M50,80 C40,70 25,75 35,90" stroke="url(#stemGradient)" stroke-width="2" fill="none" />
         </svg>
         
-        <!-- Enhanced Heart (SVG) -->
         <svg class="heart" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -338,10 +316,8 @@
                   stroke="url(#heartGradient)" stroke-width="3" fill="none" />
         </svg>
         
-        <!-- Final Message -->
         <div class="final-message" id="finalMessage">I Love You</div>
         
-        <!-- Start Prompt -->
         <div id="startPrompt">Click anywhere to begin the story</div>
     </div>
     
@@ -532,9 +508,9 @@
             finalMessage.style.animation = 'pulse 2s infinite ease-in-out';
             createFloatingHearts();
 
-            // 🌸 Auto-redirect to t.html after 6 seconds
+            // 🌸 Auto-redirect to h.html after 6 seconds
             setTimeout(function() {
-                window.location.href = "t.html";
+                window.location.href = "h.html";
             }, 6000);
         }
         
